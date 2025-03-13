@@ -4,6 +4,7 @@ import ArticleGreen from "./components/ArticleGreen"
 import ArticlePurple from "./components/ArticlePurple"
 
 const EjercicioSeis=()=>{
+    let repeticiones=[1,2,3]
     return(
         <section>
             <section className="aside">
@@ -21,9 +22,11 @@ const EjercicioSeis=()=>{
                     <ArticleGreen/>
                 </div>
                 <div>
-                    <ArticlePurple/>
-                    <ArticlePurple/>
-                    <ArticlePurple/>
+                    {
+                        repeticiones.map((repeticion)=>{
+                            return <ArticlePurple/>
+                        })
+                    }
                 </div>
             </main>
         </section>
